@@ -1,10 +1,42 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, Router } from 'vue-router';
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    { path: '/', component: () => import('../pages/Landing.vue') },
-  ]
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('@/pages/Landing.vue')
+  },
+  {
+    path: '/admin',
+    component: () => import('@/layout/AdminPanel.vue'),
+    children: [
+      {
+        path: '/dashboard',
+        component: () => import('@/pages/Dashboard.vue')
+      },
+      {
+        path: '/sales',
+        component: () => import('@/pages/Sales.vue')
+      },
+      {
+        path: '/inventory',
+        component: () => import('@/pages/Inventory.vue')
+      },
+      {
+        path: '/reports',
+        component: () => import('@/pages/Reports.vue')
+      },
+      {
+        path: '/settings',
+        component: () => import('@/pages/Settings.vue')
+      },
+    ]
+  },
+];
+
+const router: Router = createRouter({
+  routes,
+  history: createWebHistory()
 });
 
 export default router;
