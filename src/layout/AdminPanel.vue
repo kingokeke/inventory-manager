@@ -29,9 +29,11 @@
       />
     </div>
   </div>
-  <div class="col-md-8 col-xl-9 col-xxl-10 p-5">
-    <div class="m-5 p-5">
-      <router-view />
+  <div class="col-md-8 col-xl-9 col-xxl-10 py-5">
+    <div class="container">
+      <div class="row">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
