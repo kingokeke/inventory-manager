@@ -23,6 +23,18 @@ const routes = [
         component: () => import('@/pages/Inventory.vue')
       },
       {
+        path: '/products',
+        component: () => import('@/pages/Products.vue')
+      },
+      {
+        path: '/customers',
+        component: () => import('@/pages/Customers.vue')
+      },
+      {
+        path: '/suppliers',
+        component: () => import('@/pages/Suppliers.vue')
+      },
+      {
         path: '/reports',
         component: () => import('@/pages/Reports.vue')
       },
