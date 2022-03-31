@@ -12,6 +12,18 @@ const navLinks = [
     url: "/inventory",
   },
   {
+    title: "Products",
+    url: "/products",
+  },
+  {
+    title: "Customers",
+    url: "/customers",
+  },
+  {
+    title: "Suppliers",
+    url: "/suppliers",
+  },
+  {
     title: "Reports",
     url: "/reports",
   },
