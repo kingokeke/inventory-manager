@@ -6,3 +6,9 @@ export interface IOrder {
   total: number;
 }
 
+export interface IProduct {
+  name: string;
+  price: number;
+  discountPrice: number;
+  discountQty: number;
+}
